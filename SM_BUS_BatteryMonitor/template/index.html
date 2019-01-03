@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Battery Monitor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <script src="Bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 style="color:blue">Ultralife Batteries</h1>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th>Parameters</th>
+        <th>Battery 1</th>
+        <th>Battery 2</th>
+        <th>Battery 3</th>
+        <th>Battery 4</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for key in battery_data %}
+        <tr><td>{{key}}</td><td>{{battery_data[key]}}</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>
